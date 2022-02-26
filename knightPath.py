@@ -83,7 +83,8 @@ def bfs(start, end, grid):
             for i in moves:
                 queue.append(Node(i, node.dist + 1))
     
-    
+for row in grid:
+    print(row)
     
 start = input("Enter starting square: ")
 end = input("Enter ending square: ")
