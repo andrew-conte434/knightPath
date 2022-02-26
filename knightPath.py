@@ -85,11 +85,21 @@ def bfs(start, end, grid):
     
     
     
-    
-for row in grid:
-    print(row)
-    
-start = 56
-end = 6
+start = input("Enter starting square: ")
+end = input("Enter ending square: ")
 
-print("Distance: %d" %bfs(start, end, grid))
+def checkInput(start, end, grid):
+    if not start.isnumeric() or not end.isnumeric():
+        print("Invalid input!")
+        return
+    start = int(start)
+    end = int(end)
+    if not start in range(0, 64) or not end in range(0, 64):
+        print("Invalid input!")
+        return
+    print("Distance: ",bfs(start, end, grid))
+
+
+
+
+checkInput(start, end, grid)
